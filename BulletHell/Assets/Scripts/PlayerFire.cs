@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
 {
-    [SerializeField]
-    private Transform bullet;
+    public GameObject bullet;
+    public Transform[] shotSpawns;
+    public float fireRate;
+    public int fireLevel = 1;
 
-    [SerializeField]
-    private Rigidbody2D bulletRb;
-
-    public float bulletSpeed;
+    private float nextFire;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +24,25 @@ public class PlayerFire : MonoBehaviour
     }
 
     void Fire()
-    {
-        if (Input.GetKey(KeyCode.Z))
+    {                                  // Tempo de jogo
+        if (Input.GetKey(KeyCode.Z) && Time.time > nextFire)
         {
-            Transform bulletTransform = Instantiate(bullet, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
-
-            bulletRb.velocity = Vector2.up * bulletSpeed;
+            // Atualizacao do nextFire
+            nextFire = Time.time + fireRate;
+            if(fireLevel >= 1)
+            {
+                Instantiate(bullet, shotSpawns[0].position, shotSpawns[0].rotation);
+            }
+            if(fireLevel >= 2)
+            {
+                Instantiate(bullet, shotSpawns[1].position, shotSpawns[1].rotation);
+                Instantiate(bullet, shotSpawns[2].position, shotSpawns[2].rotation);
+            }
+            if(fireLevel >= 3)
+            {
+                Instantiate(bullet, shotSpawns[3].position, shotSpawns[3].rotation);
+                Instantiate(bullet, shotSpawns[4].position, shotSpawns[4].rotation);
+            }
         }
     }
 }
