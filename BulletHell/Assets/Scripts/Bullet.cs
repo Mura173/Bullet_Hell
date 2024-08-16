@@ -13,12 +13,6 @@ public class Bullet : MonoBehaviour
     {
         bulletRb = GetComponent<Rigidbody2D>();
 
-        bulletRb.velocity = Vector2.up * speed;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        bulletRb.velocity = transform.up * speed;
     }
 }
