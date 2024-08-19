@@ -45,7 +45,9 @@ GameObject:
   - component: {fileID: 5434697412605340617}
   - component: {fileID: 3525599119204802963}
   - component: {fileID: 2610404343983668870}
-  m_Layer: 0
+  - component: {fileID: 1867942128873247388}
+  - component: {fileID: -2193609400509612407}
+  m_Layer: 8
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,6 +215,34 @@ MonoBehaviour:
   - {fileID: 3495035927195452549}
   - {fileID: 7757950186475419083}
   - {fileID: 1658792180630437173}
+--- !u!114 &1867942128873247388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293436531907825923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af18b9b8da4c2d54fbc9a1292686e186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  explosion: {fileID: 608140167485981943, guid: a1a3788682cb6294babc63e392eb1d2c, type: 3}
+  damageColor: {r: 0.8867924, g: 0.14640439, b: 0.14640439, a: 1}
+--- !u!114 &-2193609400509612407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293436531907825923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec7a76835ad19544a54e650db3a6e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &2434382186434671644
 GameObject:
   m_ObjectHideFlags: 0
