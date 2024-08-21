@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af18b9b8da4c2d54fbc9a1292686e186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
   explosion: {fileID: 608140167485981943, guid: a1a3788682cb6294babc63e392eb1d2c, type: 3}
   damageColor: {r: 0.8867924, g: 0.14640439, b: 0.14640439, a: 1}
 --- !u!114 &-2193609400509612407
