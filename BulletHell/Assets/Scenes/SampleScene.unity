@@ -236,6 +236,8 @@ GameObject:
   - component: {fileID: 333852313}
   - component: {fileID: 333852314}
   - component: {fileID: 333852315}
+  - component: {fileID: 333852316}
+  - component: {fileID: 333852317}
   m_Layer: 6
   m_Name: Reimu
   m_TagString: Player
@@ -407,7 +409,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   explosion: {fileID: 5144444018281806213, guid: 0b16e472f01700e47bcf5cd2c36e57dd, type: 3}
-  damageColor: {r: 0, g: 0, b: 0, a: 0}
+  damageColor: {r: 0.8301887, g: 0.12922749, b: 0.12922749, a: 1}
+--- !u!114 &333852316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333852308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82281a1eef4124242809e1fe44fe4877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  spawnTime: 2
+  invenciblityTime: 2
+--- !u!70 &333852317
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333852308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.96875, y: 1.40625}
+  m_Direction: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,13 +759,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 3525599119204802963, guid: 683b176c694c8354fbe32a8d872286d4, type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3713689572377985274, guid: 683b176c694c8354fbe32a8d872286d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.111675024
       objectReference: {fileID: 0}
     - target: {fileID: 3713689572377985274, guid: 683b176c694c8354fbe32a8d872286d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1499088
+      value: 3.89
       objectReference: {fileID: 0}
     - target: {fileID: 3713689572377985274, guid: 683b176c694c8354fbe32a8d872286d4, type: 3}
       propertyPath: m_LocalPosition.z

@@ -25,9 +25,9 @@ public class CharacterHealth : MonoBehaviour
             if(health <= 0)
             {
                 Instantiate(explosion, transform.position, transform.rotation);
-                if(this.GetComponent<Movement>() != null)
+                if(this.GetComponent<PlayerLife>() != null)
                 {
-
+                    GetComponent<PlayerLife>().Respawn();
                 }
                 else
                 {
